@@ -116,10 +116,11 @@ const Github = styled.a`
       font-size: 0.8rem;
     }
 `;
-export const Span = styled.div`
+const Span = styled.div`
     padding: 0 4px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
+    color: ${({ theme }) => theme.white}
 `;
 
 const MobileMenu = styled.div`

@@ -101,7 +101,7 @@ const HomeRight = styled.div`
 
 const Title = styled.div`
     font-weight: 700;
-    font-size: 50px;
+    font-size: 45px;
     color: ${({ theme }) => theme.text_primary};
     line-height: 68px;
     @media (max-width: 960px) {
@@ -117,7 +117,7 @@ const Title = styled.div`
 
 const TextLoop = styled.div`
     font-weight: 600;
-    font-size: 32px;
+    font-size: 25px;
     display: flex;
     gap: 12px;
     color: ${({ theme }) => theme.text_primary};
@@ -138,7 +138,7 @@ const Span = styled.span`
 `;
 
 const Description = styled.div`
-    font-size: 20px;
+    font-size: 17px;
     line-height: 32px;
     margin-bottom: 42px;
     color: ${({ theme }) => theme.text_primary + 95};
