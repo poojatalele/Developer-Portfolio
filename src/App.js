@@ -2,7 +2,7 @@ import './App.css';
 import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme } from './utils/Theme';
 import Navbar from './components/Navbar';
-import Hero from './components/HeroSection';
+import Home from './components/Home';
 import Education from './components/Education';
 import { BrowserRouter as Router } from "react-router-dom";
 import Skills from './components/skills';
@@ -35,7 +35,7 @@ function App() {
       <Router>
         <Navbar />
         <Body>
-          <Hero />
+          <Home />
           <Wrapper>
             <Skills />
             <Education />

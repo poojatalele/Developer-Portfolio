@@ -4,6 +4,7 @@ import { Link as LinkR} from "react-router-dom";
 import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { useTheme } from 'styled-components';
+import { Bio } from "../../data/data";
 
 const Nav = styled.div`
     background-color: ${({theme}) => theme.card_light};
@@ -92,12 +93,14 @@ const ButtonContainer = styled.div`
     }
 `;
 
-const GithubButton = styled.button`
+const Github = styled.a`
     background-color: transparent;
     border: 1.8px solid ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.primary};
     border-radius: 20px;
     display: flex;
     justify-content: center;
+    text-decoration: none;
     align-items: center;
     padding: 0 20px;
     font-size: 1rem;
@@ -160,7 +163,7 @@ const GitHubButton = styled.a`
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.white};
   cursor: pointer;
   padding: 0 20px;
   font-weight: 500;
@@ -185,7 +188,7 @@ const Navbar = () => {
             <NavLogo to='/'>
                 <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
                     <DiCssdeck size="3rem" /> 
-                    <Span>Portfolio</Span>
+                    <Span>Pooja Talele</Span>
                 </a>
             </NavLogo>
                 <MobileIcon>
@@ -204,7 +207,10 @@ const Navbar = () => {
                     <NavLink href='#contact'>Contact</NavLink>
                 </NavItems>
                 <ButtonContainer>
-                    <GithubButton>Github</GithubButton>
+                    <Github
+                        href={Bio.github}
+                        target="_blank"
+                    >Github</Github>
                 </ButtonContainer>
             </NavContainer>
             {open && (
@@ -246,13 +252,8 @@ const Navbar = () => {
                     }}
                     >Contact</MobileMenuLink>
                 <GitHubButton
-                    style={{
-                        padding: "10px 16px",
-                        background: `${theme.primary}`,
-                        color: "white",
-                        width: "max-content",
-                    }}
-                    href="/"
+                    style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}}
+                    href={Bio.github}
                     target="_blank"
                     >Github</GitHubButton>
                 </MobileMenu>
